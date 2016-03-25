@@ -1,0 +1,93 @@
+   69  sudo apt-get install mysql-server
+   70  sudo apt-get install apache2
+   71  sudo apt-get install php
+   72  sudo apt-get install php5
+   73  sudo apt -get installwgetbuild essential\
+   74  nano wp-congig.php
+   75  sudo apt-get install
+   76  sudo apt-get install wget build-essential apache2 apache2-utils 
+   77  sudo apt-get install php5-gd libgd2-xpm-dev libapache2-mod-php5 postfix
+   78  sudo useradd --system --home /usr/local/nagios -M nagios
+   79  sudo groupadd --system nagcmd
+   80  sudo usermod -a -G nagcmd www-data
+   81  sudo usermod -s -G nagcmd nagios
+   82  sudo usermod -a -G nagcmd www-data
+   83  clear
+   84  cd /tmp
+   85  wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.6.tar.gz
+   86  wget http://nagios-plugins.org/download/nagios-plugins-2.0.tar.gz
+   87  tar -xzvf nagios-4.0.6.tar.gz
+   88  tar -xzvf nagios-plugins-2.0.tar.gz 
+   89  clear
+   90  cd nagios-4.0.6/
+   91  sudo ./configure --with-nagios-group=nagcmd --with-nagios-group=nagios --with-mail=/usr/sbin/sendmail --with-httpd_conf=/etc/apache2/conf-available
+   92  sudo make all
+   93  sudo make install
+   94  sudo make install-init
+   95  sudo make install-config
+   96  sudo make install-commandmode
+   97  sudo make install-webconf
+   98  sudo cp -R contrib/eventhandlers/ /usr/local/nagios/libexec/
+   99  sudo chown -R nagios:nagios /usr/local/nagios/libexec/eventhandlers
+  100  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+  101  sudo ln -s /etc/init.d/nagios /etc/rcs.d/S99nagios
+  102  sudo ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+  103  clear
+  104  cd ..
+  105  cd nagios-plugins-2.0/
+  106  sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios --enable-perl-modules --enable-extra-opts
+  107  sudo make
+  108  sudo make install
+  109  clear
+  110  sudo a2enmod cgi
+  111  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+  112  sudo vi /etc/apache2/sites-enabled/000-default.conf
+  113  sudo service apache2 restart
+  114  sudo service nagios start
+  115  clear
+  116  cd /tmp
+  117  wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.6.tar.gz
+  118  wget http://nagios-plugins.org/download/nagios-plugins-2.0.tar.gz
+  119  ls -lhd/var/lib/nagios/
+  120  ls -lhd/var/lib/nagios3/
+  121  cd ..
+  122  cd etc
+  123  cd nagios
+  124  cd nagios3/
+  125  ls -lhd /var/lib/nagios3/
+  126  ls -lhd /var/lib/nagios3/rw/
+  127  chmos g+x /var/lib/nagios3/rw/
+  128  ls -lhd /var/lib/nagios3/rw/
+  129  chmod g+x /var/lib/nagios3/rw/
+  130  chown nagios.nagcmd/usr/local/nagois/var/rw
+  131  chmod g+x /var/lib/nagios3/rw/
+  132  cd..
+  133  chown nagios.nagcmd/usr/local/nagois/var/rw
+  134  chown nagios.nagcmd/usr/local/nagois/var/rw'
+  135  q
+  136  qed
+  137  /
+  138  chown nagios.nagcmd/usr/local/nagois/var/rw'
+  139  q
+  140  qed
+  141  /
+  142  sudo chmod g+x /var/lib/nagios3/rw/
+  143  sudo la g+x /var/lib/nagios3/rw/
+  144  sudo ls g+x /var/lib/nagios3/rw/
+  145  sudo ls /var/lib/nagios3/rw/
+  146  ls -l /var/lib/nagios3/rw/
+  147  sudo ls -l /var/lib/nagios3/rw/
+  148  cd/
+  149  cd..
+  150  sudo cd..
+  151  cd../
+  152  cd /root
+  153  sudo cd /root
+  154  sudo -i
+  155  sudo apt-get install build-essential module-assistant
+  156  sudo m-a prepare
+  157  sudo start apache2
+  158  sudo service apache2 start
+  159  sudo service php start
+  160  sudo -i
+  161  sudo m-a prepare
